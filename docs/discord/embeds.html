@@ -167,6 +167,37 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="discordnyl-embeds"><a class="header" href="#discordnyl-embeds">discord.nyl Embeds</a></h1>
+<p>Example Embed:</p>
+<pre><code>// calling the discord.nyl resources from the source package.
+$thread[$constructor.build]{
+  [`discord.nyl`[slashCommandBuiler, embedBuilder, interactionHandler]]};
+$thread[slashCommandHandler]{
+  [`src/setup.nyl`[slashCommandHandler]]};
+
+// making a slash command
+$constructor.new[slashCommandBuiler(slash)];
+  slash.setName{&quot;test&quot;};
+  slash.setDescription{&quot;test command&quot;};
+
+// using our slashCommandHandler in our setup.nyl file we will add the slash command to the queue to be uploaded through slashCommandHandler.nyl
+$error.catch(
+  $send{
+    $slashCommandHandler[slash]
+  [`src/handlers/slashCommandHandler.nyl`]};
+){
+$output.console{&quot;command test.nyl failed to upload&quot;};
+$terminate
+};
+
+// responding to the command
+$on.Interaction.Command(test{
+  $constructor.new[embedBuilder(testEmbed)];
+  testEmbed.setTitle{&quot;beans&quot;};
+  testEmbed.setDescription{&quot;you are beans&quot;};
+
+$output.interaction.reply{embedHandler: [testEmbed]}; 
+});
+</code></pre>
 
                     </main>
 
