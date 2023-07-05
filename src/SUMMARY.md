@@ -1,21 +1,21 @@
 # Summary
+- 🖥️ [.nyl Documentation](docs/nyl.md)
+  - [.nyl Functions](docs/nylon/functions.md)
+  - [.nyl Function Extensions](docs/nylon/extensions.md)
+  - [.nyl Conditioners](docs/nylon/conditioners.md)
 
-- [(.nyl) Nylon](1_nylon.md) <!--- ONE -->
+- 🤖 [discord.nyl Documentation](docs/discord.md)
+  - [Discord.nyl Resources](docs/discord/resources.md)
+  - [Interactions](docs/discord/interactions.md)
+  - [Embeds](docs/discord/embeds.md)
+
+<!--- Category 3 and 4, Purpose: Updates. -->
+- 🖥️ .nyl Updates
   - [(.nyl) Checklist](1_Index/checklist.md) <!--- ONE / ONE -->
     - [.nyl Expanded Checklist](1_Index/checklist/expandedChecklist.md) <!--- ONE / ONE / ONE -->
     - [.nyl Future Checklist](1_Index/checklist/futureChecklist.md) <!--- ONE / ONE / TWO -->
-  - .nyl Documentation <!--- ONE / TWO -->
-    - [.nyl Conditioners](1_Index/documentation/conditioners.md) <!--- ONE / TWO / ONE -->
-    - [.nyl Functions](1_Index/documentation/functions.md) <!--- ONE / TWO / TWO -->
-    - [.nyl Function Extensions](1_Index/documentation/functionExtensions.md) <!--- ONE / TWO / THREE -->
-
-- [Discord.nyl](02_discord.md) <!--- TWO -->
+- 🤖 Discord.nyl Updates
   - [Discord.nyl Checklist](2_Index/checklist.md)
     - [Discord.nyl Expanded Checklist](2_Index/checklist/expandedChecklist.md)
     - [Discord.nyl Future Checklist](2_Index/checklist/futureChecklist.md)
-  - discord.nyl Documentation
-    - [.nyl Functions](2_Index/documentation/functions.md) <!--- ONE / TWO / TWO -->
-    - [.nyl Function Extensions](2_Index/documentation/functionExtensions.md) <!--- ONE / TWO / THREE -->
-    - [Discord.nyl Resources](2_Index/documentation/resources.md)
-      - [Interactions](2_Index/documentation/resources/interactions.md)
-      - [Embeds](2_Index/documentation/resources/embeds.md)
+  
