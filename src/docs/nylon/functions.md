@@ -45,3 +45,10 @@ $var(a['100']);
 $output.console{$val{a}};
 ```
 this would output `100` in the console.
+
+## $thread[source:[package]];
+call packages in the code all in one using $thread.<br>
+Example:
+```
+$thread['discord.nyl':[slashCommandBuilder]]
+```
