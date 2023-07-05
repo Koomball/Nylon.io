@@ -170,7 +170,28 @@
                         <h1 id="nylon-documentation"><a class="header" href="#nylon-documentation">Nylon Documentation</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nyl-functions"><a class="header" href="#nyl-functions">.nyl Functions</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nyl-extensions"><a class="header" href="#nyl-extensions">.nyl Extensions</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="discordnyl-documentation"><a class="header" href="#discordnyl-documentation">discord.nyl Documentation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conditioners"><a class="header" href="#conditioners">Conditioners</a></h1>
+<p><code>N=</code> Equal too for numbers. <br>
+<code>S=</code> Equal too for strings. <br>
+<code>&gt;=</code> Above or equal too. <br>
+<code>&lt;=</code> Below or equal too. <br>
+<code>&lt;</code> below. <br>
+<code>&gt;</code> above. <br>
+<code>?=</code> equals undefined/null. <br></p>
+<h1 id="advanced-conditioners"><a class="header" href="#advanced-conditioners">Advanced Conditioners.</a></h1>
+<p><code>or[(condition 1), (etc), (etc)]</code> - Returns true if any one of the conditions meet true. <br>
+Example. <br></p>
+<pre><code>$if(or[(data.a N= 5), (data.a N= 2)]){
+  output.console(&quot;beans&quot;);
+};
+</code></pre>
+<p><code>and[(condition 1, (etc), (etc)]</code> - Returns true if all conditions are met. <br>
+Example. <br></p>
+<pre><code>$if(and[(data.a &gt; 5), (data.b &gt; 2)]){
+  output.console(&quot;beans&quot;);
+};
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="discordnyl-documentation"><a class="header" href="#discordnyl-documentation">discord.nyl Documentation</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="discordnyl-resources"><a class="header" href="#discordnyl-resources">discord.nyl Resources</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="discordnyl-interactions"><a class="header" href="#discordnyl-interactions">discord.nyl Interactions</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="discordnyl-embeds"><a class="header" href="#discordnyl-embeds">discord.nyl Embeds</a></h1>
