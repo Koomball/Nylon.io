@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Fizz - Nylon (.nyl) Documentation</title>
+        <title>(.nyl) Checklist - Nylon (.nyl) Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> mdBook Quickstart</a></li><li class="chapter-item expanded "><a href="../chapter-1.html"><strong aria-hidden="true">2.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="../chapter-2.html"><strong aria-hidden="true">3.</strong> Chapter 2</a></li><li class="chapter-item expanded "><a href="../foo/index.html"><strong aria-hidden="true">4.</strong> Foo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../foo/fizz.html" class="active"><strong aria-hidden="true">4.1.</strong> Fizz</a></li><li class="chapter-item expanded "><a href="../foo/buzz.html"><strong aria-hidden="true">4.2.</strong> Buzz</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../docs/nyl.html"><strong aria-hidden="true">1.</strong> 🖥️ .nyl Documentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../docs/nylon/functions.html"><strong aria-hidden="true">1.1.</strong> .nyl Functions</a></li><li class="chapter-item expanded "><a href="../docs/nylon/extensions.html"><strong aria-hidden="true">1.2.</strong> .nyl Function Extensions</a></li><li class="chapter-item expanded "><a href="../docs/nylon/conditioners.html"><strong aria-hidden="true">1.3.</strong> .nyl Conditioners</a></li></ol></li><li class="chapter-item expanded "><a href="../docs/discord.html"><strong aria-hidden="true">2.</strong> 🤖 discord.nyl Documentation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../docs/discord/resources.html"><strong aria-hidden="true">2.1.</strong> Discord.nyl Resources</a></li><li class="chapter-item expanded "><a href="../docs/discord/interactions.html"><strong aria-hidden="true">2.2.</strong> Interactions</a></li><li class="chapter-item expanded "><a href="../docs/discord/embeds.html"><strong aria-hidden="true">2.3.</strong> Embeds</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 🖥️ .nyl Updates</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1_Index/checklist.html" class="active"><strong aria-hidden="true">3.1.</strong> (.nyl) Checklist</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1_Index/checklist/expandedChecklist.html"><strong aria-hidden="true">3.1.1.</strong> .nyl Expanded Checklist</a></li><li class="chapter-item expanded "><a href="../1_Index/checklist/futureChecklist.html"><strong aria-hidden="true">3.1.2.</strong> .nyl Future Checklist</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 🤖 Discord.nyl Updates</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2_Index/checklist.html"><strong aria-hidden="true">4.1.</strong> Discord.nyl Checklist</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2_Index/checklist/expandedChecklist.html"><strong aria-hidden="true">4.1.1.</strong> Discord.nyl Expanded Checklist</a></li><li class="chapter-item expanded "><a href="../2_Index/checklist/futureChecklist.html"><strong aria-hidden="true">4.1.2.</strong> Discord.nyl Future Checklist</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,17 +166,131 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="fizz"><a class="header" href="#fizz">Fizz</a></h1>
+                        <h1 id="nyl-checklist-index"><a class="header" href="#nyl-checklist-index">.nyl Checklist Index</a></h1>
+<p><a href="#nyl-checklist">Skip to checklist</a> <br>
+<a href="checklist/futureChecklist.html">Future Ideas Checklist</a> <br></p>
+<ul>
+<li><em><strong>Development Status Icons:</strong></em>
+<ul>
+<li><code>🟢 = Finished &amp; Live</code>, <code>🟣 = Live for Testing</code>, <code>🟡 = In Development</code></li>
+<li><code>🔵 = Development Paused</code>, <code>🔴 = Unstarted</code></li>
+<li><code>⚫ = Task Depricated / Wont be done</code></li>
+</ul>
+</li>
+<li><em><strong>Task Type Icons:</strong></em>
+<ul>
+<li><code>⚙️ = .nyl Core</code>
+<ul>
+<li><code>Related directly to the core .nyl / nylon language and how it works.</code></li>
+</ul>
+</li>
+<li><code>💾 = .nyl integration</code>
+<ul>
+<li><code>Important intergrations for .nyl so it can be utalized better.</code></li>
+</ul>
+</li>
+<li><code>📦 = Package</code>
+<ul>
+<li><code>Packages / Extensions for .nyl to allow the user to make cool stuff.</code></li>
+</ul>
+</li>
+<li><code>💽 = Package Integration</code>
+<ul>
+<li><code>Important integrations and api's for discord.nyl to function.</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em><strong>Function Type Icons:</strong></em>
+<ul>
+<li><code>⚙️ = Block Function</code>
+<ul>
+<li><code>Always starts with $ and has a {output} and normally a (condition).</code></li>
+</ul>
+</li>
+<li><code>📜 = Functions</code>
+<ul>
+<li><code>Always starts with $ could have a (argument) and will output different things.</code></li>
+</ul>
+</li>
+<li><code>🧮 = Conditioners</code>
+<ul>
+<li><code>Used to compare strings or numbers.</code></li>
+</ul>
+</li>
+<li><code>🔑 = Function extensions</code>
+<ul>
+<li><code>Modifies the output of extensions is always added after a fullstop in a function.</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="--nylon"><a class="header" href="#--nylon"><code>🟡</code> <code>⚙️</code> Nylon</a></h1>
+<blockquote>
+<ul>
+<li><code>🔴</code> <code>⚙️</code> Block Functions.
+<ul>
+<li><code>🔴</code> <code>⚙️</code> $if(condition){output};</li>
+<li><code>🔴</code> <code>⚙️</code> $else{output};</li>
+<li><code>🔴</code> <code>⚙️</code> $else.if(condition){output};</li>
+</ul>
+</li>
+<li><code>🔴</code> <code>🧮</code> Conditioners.
+<ul>
+<li><code>🔴</code> <code>🧮</code> N= (Equal too, for numbers)</li>
+<li><code>🔴</code> <code>🧮</code> S= (Equal too, for strings)</li>
+<li><code>🔴</code> <code>🧮</code> &gt;= (Above or Equal)</li>
+<li><code>🔴</code> <code>🧮</code> &lt;= (Below or Equal)</li>
+<li><code>🔴</code> <code>🧮</code> &gt; (Above)</li>
+<li><code>🔴</code> <code>🧮</code> &lt; (Below)</li>
+<li><code>🔴</code> <code>🧮</code> ?= (Equals Null/undefined/etc)</li>
+<li><code>🔴</code> <code>🧮</code> X= (Doesnt equal, works for both strings and numbers.)</li>
+<li><code>🔴</code> <code>🧮</code> or[(condition 1), (etc), (etc)]</li>
+<li><code>🔴</code> <code>🧮</code> and[(condition1), (etc), (etc)]</li>
+</ul>
+</li>
+<li><code>🔴</code> <code>📜</code> Functions.
+<ul>
+<li><code>🔴</code> <code>📜</code> $var(name{value});</li>
+<li><code>🔴</code> <code>📜</code> $val(name);</li>
+<li><code>🔴</code> <code>📜</code> $thread(name{value});</li>
+</ul>
+</li>
+<li><code>🔴</code> <code>🔑</code> Function Extensions.
+<ul>
+<li><code>🔴</code> <code>🔑</code> .separateNumber(seperator); <code>Note; added a separator to the output if its a number: 14412532.separateNumber(,); = 14,412,532</code></li>
+<li><code>🔴</code> <code>🔑</code> .round(decimalPoint); <code>Note; rounds the number to the given decimal point: 41.41431.round(2); = 41.41</code></li>
+<li><code>🔴</code> <code>🔑</code> .collapseNumber; <code>Note: collapses the number into its notation: 63426342.collapseNumber; = 63.4M</code></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h1 id="----nylon-mongodb-intergration--full-checklist-here"><a class="header" href="#----nylon-mongodb-intergration--full-checklist-here">- <code>🔴</code> <code>💾</code> Nylon mongoDB intergration ⟶ <a href="">Full Checklist Here</a></a></h1>
+<blockquote>
+<ul>
+<li><code>🔴</code> <code>💾</code> Nylon SQL intergration ⟶ <a href="">Full Checklist Here</a></li>
+<li><code>🔴</code> <code>💾</code> Nylon Other Database Integration ⟶ <a href="">Full Checklist Here</a></li>
+<li><code>🔴</code> <code>📦</code> Discord.nyl v0.0.1 alpha ⟶ <a href="">Full Checklist Here</a>
+<ul>
+<li><code>🔴</code> <code>💽</code> Discord api integration  ⟶ <a href="">Full Checklist Here</a></li>
+<li><code>🔴</code> <code>💽</code> MongoDB integration  ⟶ <a href="">Full Checklist Here</a></li>
+<li><code>🔴</code> <code>💽</code> SQL integration  ⟶ <a href="">Full Checklist Here</a></li>
+<li><code>🔴</code> <code>💽</code> Other Database Integration  ⟶ <a href="">Full Checklist Here</a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../foo/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../docs/discord/embeds.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../foo/buzz.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../1_Index/checklist/expandedChecklist.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -186,11 +300,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../foo/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../docs/discord/embeds.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../foo/buzz.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../1_Index/checklist/expandedChecklist.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
