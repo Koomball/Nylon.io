@@ -178,13 +178,13 @@
 <p><code>or[(condition 1), (etc), (etc)]</code> - Returns true if any one of the conditions meet true. <br>
 Example. <br></p>
 <pre><code>$if(or[(data.a N= 5), (data.a N= 2)]){
-  output.console(&quot;beans&quot;);
+  $output.console(&quot;beans&quot;);
 };
 </code></pre>
-<p><code>and[(condition 1, (etc), (etc)]</code> - Returns true if all conditions are met. <br>
+<p><code>and[(condition 1), (etc), (etc)]</code> - Returns true if all conditions are met. <br>
 Example. <br></p>
 <pre><code>$if(and[(data.a &gt; 5), (data.b &gt; 2)]){
-  output.console(&quot;beans&quot;);
+  $output.console(&quot;beans&quot;);
 };
 </code></pre>
 
