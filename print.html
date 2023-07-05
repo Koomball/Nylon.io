@@ -246,7 +246,7 @@ Example. <br></p>
 $thread[$constructor.build]{
   [`discord.nyl`[slashCommandBuiler, embedBuilder, interactionHandler]]};
 $thread[slashCommandHandler]{
-  [`src/setup.nyl`[slashCommandHandler]]};
+  [`src/functions/slashCommandHandler.nyl`[slashCommandHandler]]};
 
 // making a slash command
 $constructor.new[slashCommandBuiler(slash)];
@@ -254,23 +254,26 @@ $constructor.new[slashCommandBuiler(slash)];
   slash.setDescription{&quot;test command&quot;};
 
 // using our slashCommandHandler in our setup.nyl file we will add the slash command to the queue to be uploaded through slashCommandHandler.nyl
-$error.catch(
-  $send{
-    $slashCommandHandler[slash]
-  [`src/handlers/slashCommandHandler.nyl`]};
-){
+[$error.catch($slashCommandHandler[slash])
+  
 $output.console{&quot;command test.nyl failed to upload&quot;};
 $terminate
-};
+];
 
 // responding to the command
-$on.Interaction.Command(test{
+[($on).Interaction.Command(test)
+  $var(random{$rand.Num{0, 10}});
   $constructor.new[embedBuilder(testEmbed)];
+
+[($if($val[random] &lt;= 5))
   testEmbed.setTitle{&quot;beans&quot;};
   testEmbed.setDescription{&quot;you are beans&quot;};
-
+($else)
+  testEmbed.setTitle{&quot;lemons&quot;};
+  testEmbed.setDescription{&quot;you are lemons&quot;};
+];
 $output.interaction.reply{embedHandler: [testEmbed]}; 
-});
+];
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nyl-checklist-index"><a class="header" href="#nyl-checklist-index">.nyl Checklist Index</a></h1>
 <p><a href="1_Index/checklist.html#nyl-checklist">Skip to checklist</a> <br>
