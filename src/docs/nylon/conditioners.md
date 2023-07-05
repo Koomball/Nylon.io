@@ -12,13 +12,13 @@
 Example. <br>
 ```
 $if(or[(data.a N= 5), (data.a N= 2)]){
-  output.console("beans");
+  $output.console("beans");
 };
 ```
-`and[(condition 1, (etc), (etc)]` - Returns true if all conditions are met. <br>
+`and[(condition 1), (etc), (etc)]` - Returns true if all conditions are met. <br>
 Example. <br>
 ```
 $if(and[(data.a > 5), (data.b > 2)]){
-  output.console("beans");
+  $output.console("beans");
 };
 ```
