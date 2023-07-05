@@ -1,7 +1,7 @@
 [book]
-authors = ["Michael Currin"]
+authors = ["Roxette Dillon (Lead Developer, CEO, Programmer)"]
 language = "en"
 multilingual = false
 src = "src"
-title = "mdBook Quickstart"
-description = "Demo site for mdBook Quickstart repo"
+title = "Nylon (.nyl) Documentation"
+description = "Full documentation for .nyl and discord.nyl a work in progress programming language."
