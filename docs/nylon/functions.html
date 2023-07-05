@@ -167,6 +167,47 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="nyl-functions"><a class="header" href="#nyl-functions">.nyl Functions</a></h1>
+<h2 id="ifconditionoutput"><a class="header" href="#ifconditionoutput">$if(condition){output};</a></h2>
+<p>returns the given output if the condition is met. <br>
+Example 1:</p>
+<pre><code>$if(a S= &quot;beans&quot;){
+$output.console{&quot;this user is beans&quot;};
+};
+</code></pre>
+<p>Example 2 (using or)</p>
+<pre><code>$if(or[(a S= &quot;beans&quot;), (a S= &quot;lemon)]){
+$output.console{&quot;this user is either beans or lemons&quot;};
+};
+</code></pre>
+<h2 id="else"><a class="header" href="#else">$else</a></h2>
+<p>connect to a <code>$if</code> block and this will output if the condition is not met. <br>
+Example:</p>
+<pre><code>$if(a S= &quot;beans&quot;){
+$output.console{&quot;this user is beans&quot;}
+} $else{
+$output.console{&quot;this user is not beans&quot;}
+};
+</code></pre>
+<h2 id="elseifcondition"><a class="header" href="#elseifcondition">$else.if(condition)</a></h2>
+<p>connect to a <code>$if</code> block and the code will work top to bottom until a condition is met if none are met it will run <code>$else</code> if one is given or just end the <code>$if</code> block. In this example we will use a function explained in the next part called <code>$var(name[value]);</code> and <code>$val{name};</code> <br>
+Example:</p>
+<pre><code>$if(a S= &quot;beans&quot;){
+$var(outcome[&quot;you are beans]);
+} $else.if(a S= &quot;lemon&quot;){
+$var(outcome[&quot;you are lemons&quot;]);
+} $else {
+$var(outcome[&quot;you are nothing&quot;]);
+};
+
+$output.console{$val{outcome}};
+</code></pre>
+<h2 id="varnamevalue"><a class="header" href="#varnamevalue">$var(name[value])</a></h2>
+<p>this function will store a temporary value in the code that will go away once its done running, you input the name of the variable which is what you will use in <code>$val{name}</code> to output the <code>[value]</code> which will be whatever you want the value to be. <br>
+Example:</p>
+<pre><code>$var(a['100']);
+$output.console{$val{a}};
+</code></pre>
+<p>this would output <code>100</code> in the console.</p>
 
                     </main>
 
