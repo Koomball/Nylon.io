@@ -30,10 +30,12 @@ $output.console($val{a}}
 
 ## $constructor
 a unique function in nylon this requires an extension from the list below to properly function, constructors are lists that can take in values and then be used to send information in bulk to api's and stored in detabases.
-### $constructor.build(name:{code});
-used to build a constructor that can be used in `$constructor.new`
+
 <details>
 <summary> $constructor Extensions </summary>
+
+## $constructor.build(name:{code});
+used to build a constructor that can be used in `$constructor.new`
 
 <details>
   <summary>Example</summary>
