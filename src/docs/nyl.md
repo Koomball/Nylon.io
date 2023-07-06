@@ -14,6 +14,7 @@ $output.console{$val{a}};
 // output: 5
 ```
 </details> <br>
+
 ## $val{name};
 outputs the value of the given variable in `{name}`
 <details>
@@ -25,7 +26,8 @@ $output.console($val{a}}
 
 // output: test
 ```  
-</details>
+</details> <br>
+
 ## $constructor
 a unique function in nylon this requires an extension from the list below to properly function, constructors are arrays that can take in values and then be used to send information in bulk to api's and stored in detabases.
 ### $constructor.build(name:{code});
@@ -41,6 +43,7 @@ $constructor.build(profile{
 };
 ```
 </details> <br>
+
 # Examples
 Example (using $var and $if blocks)
 ```
