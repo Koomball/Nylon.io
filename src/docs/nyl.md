@@ -1,15 +1,15 @@
 # Nylon Documentation
 Example (using $var and $if blocks)
 ```
-$var(random{$randNum{0, 10}});
+$var(random:$randNum{0, 10});
 
-[if($val[random] <= 5);
-    $var[response:"beans"];
+[if($val{random} <= 5);
+    $var(response:"beans");
 $else
-    $var[response:"lemons"];
+    $var(response:"lemons");
 ];
 
-$output.console{$val[response]};
+$output.console{$val{random}};
 ```
 
 Example (discord.nyl embed command)
@@ -29,9 +29,9 @@ $constructor.new(slash:{slashCommandBuilder});
 ];
 
 [on.Interaction.Command(test);
-  $var(random{$rand.Num{0, 10}});
-  $constructor.new[embedBuilder(testEmbed)];
-    [if($val[random] <= 5);
+  $var(random:{$randNum{0, 10}});
+  $constructor.new[testEmbed:{embedBuilder}];
+    [if($val{random} <= 5);
       testEmbed.setTitle{"beans"};
       testEmbed.setDescription{"you are beans"};
     $else
