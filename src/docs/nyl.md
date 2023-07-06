@@ -14,7 +14,33 @@ $output.console{$val{a}};
 // output: 5
 ```
 </details> <br>
+## $val{name};
+outputs the value of the given variable in `{name}`
+<details>
+  <summary>Example</summary>
 
+```
+$var(a{"test"});
+$output.console($val{a}}
+
+// output: test
+```  
+</details>
+## $constructor
+a unique function in nylon this requires an extension from the list below to properly function, constructors are arrays that can take in values and then be used to send information in bulk to api's and stored in detabases.
+### $constructor.build(name:{code});
+used to build a constructor that can be used in `$constructor.new`
+<details>
+  <summary>Example</summary>
+
+```
+$constructor.build(profile{
+    string(name:{john})
+    number(age:{69})
+    string(from:{australia})
+};
+```
+</details> <br>
 # Examples
 Example (using $var and $if blocks)
 ```
