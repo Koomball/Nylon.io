@@ -1,4 +1,21 @@
 # Nylon Documentation
+text here one day
+# .nyl Functions
+always starts with `$` <br>
+## $var(name:{value});
+stores a temporary variable in the code that is deleted once its done running, input a name you want to use to call the variable in the `name:` part and then put a value to output whenever the variable is called in the `{value}` part.
+<details>
+  <summary>Example</summary>
+    
+```
+$var(a{'5'});
+$output.console{$val{a}};
+
+// output: 5
+```
+</details> <br>
+
+# Examples
 Example (using $var and $if blocks)
 ```
 $var(random:$randNum{0, 10});
