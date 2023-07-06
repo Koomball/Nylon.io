@@ -44,6 +44,9 @@ $constructor.build(profile{
 ```
 </details> <br>
 
+<details>
+<summary> $constructor extensions </summary>
+
 ### $constructor.new(name:{constructor});
 used to create a list with a constructor which will be ran in your `constructorHandler.nyl`
 <details>
@@ -56,6 +59,8 @@ $constructor.new(myProfile{profile})
     myProfile.set.age{69};
     myProfile.set.from{australia};
 ```
+</details> <br>
+
 </details> <br>
 
 # Examples
