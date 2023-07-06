@@ -168,7 +168,7 @@
                     <main>
                         <h1 id="nylon-documentation"><a class="header" href="#nylon-documentation">Nylon Documentation</a></h1>
 <p>Example (using $var and $if blocks)</p>
-<pre><code>$var[random{$randNum{0, 10}}];
+<pre><code>$var(random{$randNum{0, 10}});
 
 [if($val[random] &lt;= 5);
     $var[response:&quot;beans&quot;];
@@ -182,12 +182,16 @@ $output.console{$val[response]};
 <pre><code>$thread[discord.nyl{slashCommandBuilder, embedBuilder, interactionHandler}];
 $thread[src/functions/slashCommandHandler.nyl{slashCommandHandler}];
 
-$constructor.new[slash:{slashCommandBuilder}];
-    &lt; slash.setTitle{&quot;test&quot;}
-      slash.setDescription{&quot;test command&quot;} &gt;;
-[(error).catch(uploadError); 
-$slashCommandHandler[slash.construction]
-[(if(uploadError S= gail
+$constructor.new(slash:{slashCommandBuilder});
+    slash.setTitle{&quot;test&quot;}
+    slash.setDescription{&quot;test command&quot;} &gt;;
+[error.catch(uploadError); 
+    $slashCommandHandler[$constructor.find(slash)]
+    [if(uploadError S= false);
+        $output.console{&quot;test failed to upload&quot;}
+        $terminate
+    ];
+];
 </code></pre>
 
                     </main>
