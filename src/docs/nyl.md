@@ -14,8 +14,8 @@ $output.console{$val[response]};
 
 Example (discord.nyl embed command)
 ```
-$thread[discord.nyl{slashCommandBuilder, embedBuilder, interactionHandler}];
-$thread[src/functions/slashCommandHandler.nyl{slashCommandHandler}];
+$thread[discord.nyl:{slashCommandBuilder, embedBuilder, interactionHandler}];
+$thread[src/functions/slashCommandHandler.nyl:{slashCommandHandler}];
 
 $constructor.new(slash:{slashCommandBuilder});
     slash.setTitle{"test"}
@@ -26,4 +26,17 @@ $constructor.new(slash:{slashCommandBuilder});
         $output.console{"test failed to upload"}
         $terminate
     ];
+];
+
+[on.Interaction.Command(test);
+  $var(random{$rand.Num{0, 10}});
+  $constructor.new[embedBuilder(testEmbed)];
+    [if($val[random] <= 5);
+      testEmbed.setTitle{"beans"};
+      testEmbed.setDescription{"you are beans"};
+    $else
+      testEmbed.setTitle{"lemons"};
+      testEmbed.setDescription{"you are lemons"};
+    ];
+$output.interaction.reply{embed: [testEmbed]}; 
 ];
