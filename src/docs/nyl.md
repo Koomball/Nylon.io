@@ -66,7 +66,7 @@ $constructor.new(myProfile{profile})
 ## $output
 requires an extension to work, whatever is inputted is outputted into the directed extension.
 <details>
-<summary> $output Extensions <\summary>
+<summary> $output Extensions </summary>
 
 ## $output.console{output};
 text here
