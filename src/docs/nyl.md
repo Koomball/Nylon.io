@@ -33,6 +33,9 @@ a unique function in nylon this requires an extension from the list below to pro
 ### $constructor.build(name:{code});
 used to build a constructor that can be used in `$constructor.new`
 <details>
+<summary> $constructor Extensions </summary>
+
+<details>
   <summary>Example</summary>
 
 ```
@@ -44,10 +47,7 @@ $constructor.build(profile{
 ```
 </details> <br>
 
-<details>
-<summary> $constructor Extensions </summary>
-
-### $constructor.new(name:{constructor});
+## $constructor.new(name:{constructor});
 used to create a list with a constructor which will be ran in your `constructorHandler.nyl`
 <details>
   <summary>Example</summary>
