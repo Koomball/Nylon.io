@@ -37,10 +37,24 @@ used to build a constructor that can be used in `$constructor.new`
 
 ```
 $constructor.build(profile{
-    string(name:{john})
-    number(age:{69})
-    string(from:{australia})
+    string(name)
+    number(age)
+    string(from)
 };
+```
+</details> <br>
+
+### $constructor.new(name:{constructor});
+used to create a list with a constructor which will be ran in your `constructorHandler.nyl`
+<details>
+  <summary>Example</summary>
+
+```
+$thread(`src/functions/constructorHandler.nyl`:{profile});
+$constructor.new(myProfile{profile})
+    myProfle.set.name{john};
+    myProfile.set.age{69};
+    myProfile.set.from{australia};
 ```
 </details> <br>
 
