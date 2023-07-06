@@ -197,10 +197,21 @@ $output.console($val{a}}
 <details>
   <summary>Example</summary>
 <pre><code>$constructor.build(profile{
-    string(name:{john})
-    number(age:{69})
-    string(from:{australia})
+    string(name)
+    number(age)
+    string(from)
 };
+</code></pre>
+</details> <br>
+<h3 id="constructornewnameconstructor"><a class="header" href="#constructornewnameconstructor">$constructor.new(name:{constructor});</a></h3>
+<p>used to create a list with a constructor which will be ran in your <code>constructorHandler.nyl</code></p>
+<details>
+  <summary>Example</summary>
+<pre><code>$thread(`src/functions/constructorHandler.nyl`:{profile});
+$constructor.new(myProfile{profile})
+    myProfle.set.name{john};
+    myProfile.set.age{69};
+    myProfile.set.from{australia};
 </code></pre>
 </details> <br>
 <h1 id="examples"><a class="header" href="#examples">Examples</a></h1>
