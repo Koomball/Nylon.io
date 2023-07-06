@@ -168,15 +168,15 @@
                     <main>
                         <h1 id="nylon-documentation"><a class="header" href="#nylon-documentation">Nylon Documentation</a></h1>
 <p>Example (using $var and $if blocks)</p>
-<pre><code>$var(random{$randNum{0, 10}});
+<pre><code>$var(random:$randNum{0, 10});
 
-[if($val[random] &lt;= 5);
-    $var[response:&quot;beans&quot;];
+[if($val{random} &lt;= 5);
+    $var(response:&quot;beans&quot;);
 $else
-    $var[response:&quot;lemons&quot;];
+    $var(response:&quot;lemons&quot;);
 ];
 
-$output.console{$val[response]};
+$output.console{$val{random}};
 </code></pre>
 <p>Example (discord.nyl embed command)</p>
 <pre><code>$thread[discord.nyl:{slashCommandBuilder, embedBuilder, interactionHandler}];
@@ -194,9 +194,9 @@ $constructor.new(slash:{slashCommandBuilder});
 ];
 
 [on.Interaction.Command(test);
-  $var(random{$rand.Num{0, 10}});
-  $constructor.new[embedBuilder(testEmbed)];
-    [if($val[random] &lt;= 5);
+  $var(random:{$randNum{0, 10}});
+  $constructor.new[testEmbed:{embedBuilder}];
+    [if($val{random} &lt;= 5);
       testEmbed.setTitle{&quot;beans&quot;};
       testEmbed.setDescription{&quot;you are beans&quot;};
     $else
