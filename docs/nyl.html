@@ -180,8 +180,8 @@ $output.console{$val{a}};
 // output: 5
 </code></pre>
 </details> <br>
-## $val{name};
-outputs the value of the given variable in `{name}`
+<h2 id="valname"><a class="header" href="#valname">$val{name};</a></h2>
+<p>outputs the value of the given variable in <code>{name}</code></p>
 <details>
   <summary>Example</summary>
 <pre><code>$var(a{&quot;test&quot;});
@@ -189,11 +189,11 @@ $output.console($val{a}}
 
 // output: test
 </code></pre>
-</details>
-## $constructor
-a unique function in nylon this requires an extension from the list below to properly function, constructors are arrays that can take in values and then be used to send information in bulk to api's and stored in detabases.
-### $constructor.build(name:{code});
-used to build a constructor that can be used in `$constructor.new`
+</details> <br>
+<h2 id="constructor"><a class="header" href="#constructor">$constructor</a></h2>
+<p>a unique function in nylon this requires an extension from the list below to properly function, constructors are arrays that can take in values and then be used to send information in bulk to api's and stored in detabases.</p>
+<h3 id="constructorbuildnamecode"><a class="header" href="#constructorbuildnamecode">$constructor.build(name:{code});</a></h3>
+<p>used to build a constructor that can be used in <code>$constructor.new</code></p>
 <details>
   <summary>Example</summary>
 <pre><code>$constructor.build(profile{
@@ -203,43 +203,46 @@ used to build a constructor that can be used in `$constructor.new`
 };
 </code></pre>
 </details> <br>
-# Examples
-Example (using $var and $if blocks)
-```
-$var(random:$randNum{0, 10});
-<p>[if($val{random} &lt;= 5);
-$var(response:&quot;beans&quot;);
-$else
-$var(response:&quot;lemons&quot;);
-];</p>
-<p>$output.console{$val{random}};</p>
-<pre><code>
-Example (discord.nyl embed command)
-</code></pre>
-<p>$thread[discord.nyl:{slashCommandBuilder, embedBuilder, interactionHandler}];
-$thread[src/functions/slashCommandHandler.nyl:{slashCommandHandler}];</p>
-<p>$constructor.new(slash:{slashCommandBuilder});
-slash.setTitle{&quot;test&quot;}
-slash.setDescription{&quot;test command&quot;} &gt;;
-[error.catch(uploadError); 
-$slashCommandHandler[$constructor.find(slash)]
-[if(uploadError S= false);
-$output.console{&quot;test failed to upload&quot;}
-$terminate
-];
-];</p>
-<p>[on.Interaction.Command(test);
-$var(random:{$randNum{0, 10}});
-$constructor.new[testEmbed:{embedBuilder}];
+<h1 id="examples"><a class="header" href="#examples">Examples</a></h1>
+<p>Example (using $var and $if blocks)</p>
+<pre><code>$var(random:$randNum{0, 10});
+
 [if($val{random} &lt;= 5);
-testEmbed.setTitle{&quot;beans&quot;};
-testEmbed.setDescription{&quot;you are beans&quot;};
+    $var(response:&quot;beans&quot;);
 $else
-testEmbed.setTitle{&quot;lemons&quot;};
-testEmbed.setDescription{&quot;you are lemons&quot;};
+    $var(response:&quot;lemons&quot;);
 ];
+
+$output.console{$val{random}};
+</code></pre>
+<p>Example (discord.nyl embed command)</p>
+<pre><code>$thread[discord.nyl:{slashCommandBuilder, embedBuilder, interactionHandler}];
+$thread[src/functions/slashCommandHandler.nyl:{slashCommandHandler}];
+
+$constructor.new(slash:{slashCommandBuilder});
+    slash.setTitle{&quot;test&quot;}
+    slash.setDescription{&quot;test command&quot;} &gt;;
+[error.catch(uploadError); 
+    $slashCommandHandler[$constructor.find(slash)]
+    [if(uploadError S= false);
+        $output.console{&quot;test failed to upload&quot;}
+        $terminate
+    ];
+];
+
+[on.Interaction.Command(test);
+  $var(random:{$randNum{0, 10}});
+  $constructor.new[testEmbed:{embedBuilder}];
+    [if($val{random} &lt;= 5);
+      testEmbed.setTitle{&quot;beans&quot;};
+      testEmbed.setDescription{&quot;you are beans&quot;};
+    $else
+      testEmbed.setTitle{&quot;lemons&quot;};
+      testEmbed.setDescription{&quot;you are lemons&quot;};
+    ];
 $output.interaction.reply{embed: [testEmbed]}; 
-];</p>
+];
+</code></pre>
 
                     </main>
 
