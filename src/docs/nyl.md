@@ -45,7 +45,7 @@ $constructor.build(profile{
 </details> <br>
 
 <details>
-<summary> $constructor extensions </summary>
+<summary> $constructor Extensions </summary>
 
 ### $constructor.new(name:{constructor});
 used to create a list with a constructor which will be ran in your `constructorHandler.nyl`
@@ -58,6 +58,25 @@ $constructor.new(myProfile{profile})
     myProfle.set.name{john};
     myProfile.set.age{69};
     myProfile.set.from{australia};
+```
+</details> <br>
+
+</details> <br>
+
+## $output
+requires an extension to work, whatever is inputted is outputted into the directed extension.
+<details>
+<summary> $output Extensions <\summary>
+
+## $output.console{output};
+text here
+<details>
+<summary> Example </summary>
+
+```
+$output.console{"abc"}
+
+// outputs abc into the console when the code is ran.
 ```
 </details> <br>
 
