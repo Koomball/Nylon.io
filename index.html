@@ -167,6 +167,20 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="nylon-documentation"><a class="header" href="#nylon-documentation">Nylon Documentation</a></h1>
+<p>text here one day</p>
+<h1 id="nyl-functions"><a class="header" href="#nyl-functions">.nyl Functions</a></h1>
+<p>always starts with <code>$</code> <br></p>
+<h2 id="varnamevalue"><a class="header" href="#varnamevalue">$var(name:{value});</a></h2>
+<p>stores a temporary variable in the code that is deleted once its done running, input a name you want to use to call the variable in the <code>name:</code> part and then put a value to output whenever the variable is called in the <code>{value}</code> part.</p>
+<details>
+  <summary>Example</summary>
+<pre><code>$var(a{'5'});
+$output.console{$val{a}};
+
+// output: 5
+</code></pre>
+</details> <br>
+<h1 id="examples"><a class="header" href="#examples">Examples</a></h1>
 <p>Example (using $var and $if blocks)</p>
 <pre><code>$var(random:$randNum{0, 10});
 
