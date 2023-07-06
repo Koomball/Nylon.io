@@ -84,6 +84,125 @@ $output.console{"abc"}
 
 </details> <br>
 
+## $else
+only works inside the second argument of `[;]` blocks with a `if()` or `elseif()` declaration, if the condition given is met then the `[;]` block will only read before `$else` if the condition is not met it will only read after `$else`
+<details>
+<summary> Example </summary>
+
+```
+$var(a{$randNum{0, 10}});
+
+[if(a <= 5);
+    $console.output{"abc"};
+$else
+    $console.output{"cba"};
+];
+
+// if variable a is 5 or lower the console will output abc.
+// if the variable a is above 5 the console will output cba.
+```
+</details> <br>
+
+## $elseif(condition)
+only works inside of a `[;]` block with a `if()` or `elseif()` declaration, if the condition prior to this one is not met then it will check this condition, if the condition is met it will run the outcome below and end the block, if the condition is not met it will move on or if theres nothing to proceed to it will end the block.
+<details>
+<summary> Example </summary>
+
+```
+$var(a{$randNum{0, 10}});
+
+[if(a <= 3);
+  $output.console{"house"};
+  // if a is 3 or lower console will output house.
+$elseif(a <= 6);
+  $output.console{"car"};
+  // if a wasnt 3 or lower but is 6 or lower then the console will output car.
+$else
+  $consle.output{"tree"};
+  // if a wasnt 3 or lower and wasnt 6 or lower this $else will run and the console will output tree.
+];
+```
+</details> <br>
+
+# .nyl block declarations.
+always goes in the first argument of `[;]` blocks.
+
+## [;]
+this is a block it changes the way the code is handled either to allow it to repeat, or only run if a condition is met or to only make it run when something happens. the block is split it two parts `declaration` and `outcome` which is built like this.
+```
+[declaration;
+  outcome
+];
+```
+below is a list of declarations that can be used inside of `[;]`
+
+## if(condition)
+can only be placed in the first argument of a `[;]` block.
+<details>
+<summary> Example </summary>
+
+```
+$var(a{$randNum{0, 10}});
+
+[if(a <= 5);
+    $output.console{"abc"}
+];
+
+// if the variable a ends up being below or equal to 5 then the code will output abc into the console.
+```
+</details> <br>
+
+## on.
+requires an extension to work, makes the block only run if the given extension occurs while the code is being run.
+<details>
+<summary> on Extensions </summary>
+
+## on.ping(name);
+runs when a `$ping` function with the same name as the one given is ran.
+<details>
+<summary> Example </summary>
+
+Simple Example
+```
+$var(a{$randNum{0, 10}});
+
+[if(a < 5);
+  $ping(test)
+];
+
+[on.ping(test);
+  $output.console{"abc"}
+];
+
+// if a is below 5 then it will run $ping(test) which will trigger [on.ping(test);outcome]
+```
+
+Advanced example.
+```
+$var(a{$randNum{0, 10}});
+
+[if(a < 5);
+  $ping(ask input)
+  $waitFor.ping(input given)
+  
+  $output.console{$val{input}};
+];
+
+[on.ping(ask input);
+  $output.console{"input some text"}
+  [on.input.console;
+    $var(input{$input.console});
+    $ping(input given)
+  ];
+];
+
+// this though a horrible way to do it, will ask the user to input some text if the variable a is below 5, it will then output whatever text was given back out into the console.
+```
+  
+<details> <br>
+
+<details> <br>
+
 # Examples
 Example (using $var and $if blocks)
 ```
