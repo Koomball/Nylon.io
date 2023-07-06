@@ -180,8 +180,8 @@ $else
 $output.console{$val[response]};
 </code></pre>
 <p>Example (discord.nyl embed command)</p>
-<pre><code>$thread[discord.nyl{slashCommandBuilder, embedBuilder, interactionHandler}];
-$thread[src/functions/slashCommandHandler.nyl{slashCommandHandler}];
+<pre><code>$thread[discord.nyl:{slashCommandBuilder, embedBuilder, interactionHandler}];
+$thread[src/functions/slashCommandHandler.nyl:{slashCommandHandler}];
 
 $constructor.new(slash:{slashCommandBuilder});
     slash.setTitle{&quot;test&quot;}
@@ -192,6 +192,19 @@ $constructor.new(slash:{slashCommandBuilder});
         $output.console{&quot;test failed to upload&quot;}
         $terminate
     ];
+];
+
+[on.Interaction.Command(test);
+  $var(random{$rand.Num{0, 10}});
+  $constructor.new[embedBuilder(testEmbed)];
+    [if($val[random] &lt;= 5);
+      testEmbed.setTitle{&quot;beans&quot;};
+      testEmbed.setDescription{&quot;you are beans&quot;};
+    $else
+      testEmbed.setTitle{&quot;lemons&quot;};
+      testEmbed.setDescription{&quot;you are lemons&quot;};
+    ];
+$output.interaction.reply{embed: [testEmbed]}; 
 ];
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nyl-functions"><a class="header" href="#nyl-functions">.nyl Functions</a></h1>
