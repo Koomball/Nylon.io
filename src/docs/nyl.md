@@ -15,6 +15,19 @@ $output.console{$val{a}};
 ```
 </details> <br>
 
+### $var(name:{value}, {value});
+stores a list of temporary values that is deleted once the code is done running, input a name you want to call the variable in the `name:` part and then put values in `{value}` seperated with a `,` for each value. (starts at `1`)
+<details>
+  <summary>Example</summary>
+
+```
+$var(a{"apple"}, {"orange"}, {"pear"});
+$output.console{$val{a(2)}};
+
+// output: orange
+```
+</details>
+
 ## $val{name};
 outputs the value of the given variable in `{name}`
 <details>
@@ -28,6 +41,31 @@ $output.console($val{a}}
 ```  
 </details> <br>
 
+### $val{name(listNum)};
+outputs a value from a list variable input what number value from the list you want to grab in the `(listNum)` section, or input `(-;SEPARATOR)` to output all the values with a given separator.
+<details>
+  <summary>Example</summary>
+
+```
+$var(a{"apple"}, {"orange"}, {"pear"});
+$output.console{$val{a(2)}};
+$output.console{$val{a(1)}};
+
+// output 1: orange
+// output 2: apple
+```
+</details>
+
+<details>
+  <summary>Example with (-;SEPARATOR)</summary>
+
+```
+$var(a{"apple"}, {"orange"}, {"pear"});
+$output.console{$val{a(-;, )}};
+
+// output: apple, orange, pear
+```
+</details>
 ## $constructor
 a unique function in nylon this requires an extension from the list below to properly function, constructors are lists that can take in values and then be used to send information in bulk to api's and stored in detabases.
 
@@ -198,10 +236,28 @@ $var(a{$randNum{0, 10}});
 
 // this though a horrible way to do it, will ask the user to input some text if the variable a is below 5, it will then output whatever text was given back out into the console.
 ```
-  
-<details> <br>
+</details> <br>
+</details> <br>
 
-<details> <br>
+# advanced functions & block declarations.
+## isolate
+can only be a declaration in a `[;]` block will isolate the code inside meaning once its done any stores `$var`'s or other temporarily stored data is deleted once the block ends. this can be used to delete data you no longer need before the code ends.
+<details>
+  <summary>Example</summary>
+
+```
+$var(a{'5'});
+
+[isolate;
+  $var(a);
+];
+
+$output.console{$val{a}};
+
+// output: ERROR: temporary variable "a" doesnt exist. Either create it with $var(a{value})
+or if this is meant to happen use $error.await($val{output}) at the top of your code.
+```
+</details>
 
 # Examples
 Example (using $var and $if blocks)
