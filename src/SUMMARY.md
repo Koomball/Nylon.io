@@ -1,4 +1,5 @@
 # Summary
+- [Welcome to nylon](01_nylon.md)
 - [🖥️ .nyl Documentation](docs/nyl.md)
   - [.nyl Functions](docs/nylon/functions.md)
   - [.nyl Function Extensions](docs/nylon/extensions.md)
