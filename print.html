@@ -183,6 +183,16 @@ $output.console{$val{a}};
 // output: 5
 </code></pre>
 </details> <br>
+<h3 id="varnamevalue-value"><a class="header" href="#varnamevalue-value">$var(name:{value}, {value});</a></h3>
+<p>stores a list of temporary values that is deleted once the code is done running, input a name you want to call the variable in the <code>name:</code> part and then put values in <code>{value}</code> seperated with a <code>,</code> for each value. (starts at <code>1</code>)</p>
+<details>
+  <summary>Example</summary>
+<pre><code>$var(a{&quot;apple&quot;}, {&quot;orange&quot;}, {&quot;pear&quot;});
+$output.console{$val{a(2)}};
+
+// output: orange
+</code></pre>
+</details>
 <h2 id="valname"><a class="header" href="#valname">$val{name};</a></h2>
 <p>outputs the value of the given variable in <code>{name}</code></p>
 <details>
@@ -193,8 +203,28 @@ $output.console($val{a}}
 // output: test
 </code></pre>
 </details> <br>
-<h2 id="constructor"><a class="header" href="#constructor">$constructor</a></h2>
-<p>a unique function in nylon this requires an extension from the list below to properly function, constructors are lists that can take in values and then be used to send information in bulk to api's and stored in detabases.</p>
+<h3 id="valnamelistnum"><a class="header" href="#valnamelistnum">$val{name(listNum)};</a></h3>
+<p>outputs a value from a list variable input what number value from the list you want to grab in the <code>(listNum)</code> section, or input <code>(-;SEPARATOR)</code> to output all the values with a given separator.</p>
+<details>
+  <summary>Example</summary>
+<pre><code>$var(a{&quot;apple&quot;}, {&quot;orange&quot;}, {&quot;pear&quot;});
+$output.console{$val{a(2)}};
+$output.console{$val{a(1)}};
+
+// output 1: orange
+// output 2: apple
+</code></pre>
+</details>
+<details>
+  <summary>Example with (-;SEPARATOR)</summary>
+<pre><code>$var(a{&quot;apple&quot;}, {&quot;orange&quot;}, {&quot;pear&quot;});
+$output.console{$val{a(-;, )}};
+
+// output: apple, orange, pear
+</code></pre>
+</details>
+## $constructor
+a unique function in nylon this requires an extension from the list below to properly function, constructors are lists that can take in values and then be used to send information in bulk to api's and stored in detabases.
 <details>
 <summary> $constructor Extensions </summary>
 <h2 id="constructorbuildnamecode"><a class="header" href="#constructorbuildnamecode">$constructor.build(name:{code});</a></h2>
@@ -331,8 +361,25 @@ $else
 
 // this though a horrible way to do it, will ask the user to input some text if the variable a is below 5, it will then output whatever text was given back out into the console.
 </code></pre>
-<details> <br>
-<details> <br>
+</details> <br>
+</details> <br>
+<h1 id="advanced-functions--block-declarations"><a class="header" href="#advanced-functions--block-declarations">advanced functions &amp; block declarations.</a></h1>
+<h2 id="isolate"><a class="header" href="#isolate">isolate</a></h2>
+<p>can only be a declaration in a <code>[;]</code> block will isolate the code inside meaning once its done any stores <code>$var</code>'s or other temporarily stored data is deleted once the block ends. this can be used to delete data you no longer need before the code ends.</p>
+<details>
+  <summary>Example</summary>
+<pre><code>$var(a{'5'});
+
+[isolate;
+  $var(a);
+];
+
+$output.console{$val{a}};
+
+// output: ERROR: temporary variable &quot;a&quot; doesnt exist. Either create it with $var(a{value})
+or if this is meant to happen use $error.await($val{output}) at the top of your code.
+</code></pre>
+</details>
 <h1 id="examples"><a class="header" href="#examples">Examples</a></h1>
 <p>Example (using $var and $if blocks)</p>
 <pre><code>$var(random:$randNum{0, 10});
