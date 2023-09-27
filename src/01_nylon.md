@@ -15,6 +15,7 @@ text
   - Config
 **config.nyl**
 <details> <summary> text </summary>
+  
 ```
 text
 ```
