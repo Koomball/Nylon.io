@@ -2,17 +2,17 @@
 
 - Nylon (nyl) File Layout & NylonList (nys)
   - Folders
-📁 > project
-    📁 > nylon (folder / dont modify)
-    📁 > src (folder)
-      💾 > startScript.nyl
-    📁 > watchers (folder)
-      💾 > exampleWatcher.nyl
-    📁 > variables (folder)
-      💾 > exampleFrame.nyl
-    📁 > project (folder)
-  💾 > config.nys
-  💾 > packages.nys
+📁 > project <br>
+    📁 > nylon (folder / dont modify)<br>
+    📁 > src (folder)<br>
+      💾 > startScript.nyl <br>
+    📁 > watchers (folder) <br>
+      💾 > exampleWatcher.nyl <br>
+    📁 > variables (folder) <br>
+      💾 > exampleFrame.nyl <br>
+    📁 > project (folder) <br>
+  💾 > config.nys <br>
+  💾 > packages.nys <br>
 
   - Nylon List
 Nylon Lists / under the file extension .nys is used for configuration files within nylon primarily `config.nys` and `packages.nys`. <br>
