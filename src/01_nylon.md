@@ -12,12 +12,28 @@ text
 ```
  - Nylon
   - How to Install
-  - Config
-**config.nyl**
-<details> <summary> text </summary>
+  - Configuration
+**config.nyls**
+<details> <summary> config.nyls </summary>
   
 ```
-text
+- nylon config.nyls.
+
+- Settings.
+  [ - Watchers.
+      > Max Constant Watchers: 9;
+      > Max Dormant Watchers: 30;
+      > Max Active Watchers: 9;
+    - Console / Output.
+      > Output: true;
+      > Ouput Errors: true;
+  ]
+
+- File Configuration.
+  [ > Watcher Folder: src/watchers/
+    > Start Script: startScript.nyl
+    > Packages Config: packages.nyls
+  ]
 ```
 
 </details>
@@ -32,13 +48,24 @@ Example: `nyl i discord.nyl@v0.1` <br>
 **Run startScript.nyl** <br>
 Command: `nyl startScript`
 
-
-
-❌❌❌packages❌❌❌
 - 📦 Discord.nyl
- - .dnyl [📦 Discord.nyl]
+ - .nyls [📦 Discord.nyls]
+<details> <summary> package.nyls </summary>
+
+```
+- discord.nyl
+  [ - Developed By: Nylon Developments
+    - Version: v0.1
+    - Config.
+      [ > enabled: true; ]
+  ]
+```
+
+</details>
+ - .dnyl [📦 Discord.dnyl]
+
  - .nyl [📦 Discord.nyl]
- - .nyls [📦 Discord.nyl]
+
 - 📦 Environment.nyl
  - .nyls [📦 Environment.nyl]
  - .nyl [📦 Environment.nyl]
