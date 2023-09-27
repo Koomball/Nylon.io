@@ -1,61 +1,157 @@
-# .nyl Checklist Index
-[Skip to checklist](#nyl-checklist) <br>
-[Future Ideas Checklist](checklist/futureChecklist.md) <br>
-- ***Development Status Icons:***
-  - `🟢 = Finished & Live`, `🟣 = Live for Testing`, `🟡 = In Development`
-  - `🔵 = Development Paused`, `🔴 = Unstarted`
-  - `⚫ = Task Depricated / Wont be done`
-- ***Task Type Icons:***
-  - `⚙️ = .nyl Core`
-    - `Related directly to the core .nyl / nylon language and how it works.`
-  - `💾 = .nyl integration`
-    - `Important intergrations for .nyl so it can be utalized better.`
-  - `📦 = Package`
-    - `Packages / Extensions for .nyl to allow the user to make cool stuff.`
-  - `💽 = Package Integration`
-    - `Important integrations and api's for discord.nyl to function.`
-- ***Function Type Icons:***
-  - `⚙️ = Block Function`
-    - `Always starts with $ and has a {output} and normally a (condition).`
-  - `📜 = Functions`
-    - `Always starts with $ could have a (argument) and will output different things.`
-  - `🧮 = Conditioners`
-    - `Used to compare strings or numbers.`
-  - `🔑 = Function extensions`
-    - `Modifies the output of extensions is always added after a fullstop in a function.`
+# Nylon scrapbook
+
+- Nylon (nyl) File Layout & NylonList (nys)
+  - Folders
+📁 > project
+    📁 > nylon (folder / dont modify)
+    📁 > src (folder)
+      💾 > startScript.nyl
+    📁 > watchers (folder)
+      💾 > exampleWatcher.nyl
+    📁 > variables (folder)
+      💾 > exampleFrame.nyl
+    📁 > project (folder)
+  💾 > config.nys
+  💾 > packages.nys
+
+  - Nylon List
+Nylon Lists / under the file extension .nys is used for configuration files within nylon primarily `config.nys` and `packages.nys`. <br>
+***Config.nys Example***
+```
+- This is an example of the config.nys file that would automatically be created when you install nylon into a folder.
+
+- Nylon Settings / Configuration !
+  - Watcher Settings
+    > Constant Watchers Max: 9;
+      > Constant Watchers Folder: src/watchers;
+    > Dormant Watchers Max: 30;
+    > Active Watchers Max: 5;
+
+- Console Settings
+  > Output: Yes;
+  > Output Errors: Yes;
+    > Offer Error Resolve: Yes;
+    > Output Layout Errors: No;
+
+  > Advanced Error Outputs: No;
+    > Offer Possible Missing Packages: No;
+```
+ <br>
+***Packages.nys*** *(example with discord.nyl & environment.nyl installed)* 
+```
+- Installed Packages
+    - discord.nyl
+      > enabled: yes;
+    - environment.nyl
+      > enabled: yes;
+
+- discord.nyl
+  - Developed By: Nylon Development.
+  - Version: v0.1
+    > Core File: src/core.nyl;
+    > Command Listener: src/watchers/commandHandler.nyl;
+    > Environment (put Env if using environment.nyl): Env;
+
+- environment.nyl
+  - Developed By: Nylon Development.
+  - Version: v0.1
+    > Use enviroment.nyl?: Yes;
+```
+- Console Commands
+  - Settings
+    - Settings List
+`nyl s`, `nyl settings` <br>
+Displays list of all settings and there configurations. <br>
+```
+OUTPUT:
+nylon settings / configuration.
+  Constant Watchers Max: 9
+  Dormant Watchers Max: 30
+  Active Watchers Max: 5
+
+  Output: Yes
+  Output Errors: Yes
+  Offer Error Resolve: Yes
+  Advanced Error Outputs: No
+    - Output Layout Errors: No
+    - Offer Possible Missing Packages: No
+
+```
+ <br>
+    - Settings Set
+`nyl sset <settingKeyword> <configuration>`, `nyl settings set <setting> <configuration>` <br>
+Setting Keywords:<br>
+Constant Watchers Max = `ConstantWatchers` <br>
+Dormant Watchers Max = `DormantWatchers` <br>
+Active Watchers Max = `ActiveWatchers` <br>
+Output = `Output` <br>
+Output Errors = `OutputErrors` <br>
+Offer Error Resolve = `ErrorResolve` <br>
+Advanced Error Outputs = `AdvancedErrors` <br>
+Output Layout Errors = `LayoutErrors` <br>
+Offer Possible Missing Packages = `MissingPackage` <br>
+
+Setting Configurations:<br>
+Constant Watchers Max = `Must be 0 or above (or - for infinite)` <br>
+Dormant Watchers Max = `Must be 0 or above (or - for infinite)` <br>
+Active Watchers Max = `Must be 0 or above (or - for infinite)` <br>
+Output = `Yes / No` <br>
+Output Errors = `Yes / No` <br>
+Offer Error Resolve = `Yes / No` <br>
+Advanced Error Outputs = `Yes / No` <br>
+Output Layout Errors = `Yes / No` <br>
+Offer Possible Missing Packages = `Yes / No` <br>
+
+ <br>
+    - Constant Watchers Max
+text
+    - Dormant Watchers Max
+text
+    - Active Watchers Max
+text
+    - Advanced Error Outputs
+- Nylon
+**Index**
+> File Types
+  > Watchers
+  > Nylon List (nys)
+
+- File Types
+text
+  - Watchers
+text
+    - Constant Watchers
+Constant watchers are stored in `project/src/watchers` and constantly run and await triggers while scriptStart.nyl is running. <br>
+**Example:** <br>
+*File Name: exampleWatcher.nyl* | *Location: ../src/watchers* 
+```
+thread[nylon(watcher)];
   
+  listen: ../src/project/
+    for: [
+      - Green
+      - Red
+      - Yellow
+    ];
 
+  store: Cool Person,
+    value: false;
 
-# `🟡` `⚙️` Nylon
-> - `🔴` `⚙️` Block Functions.
->   - `🔴` `⚙️` $if(condition){output};
->   - `🔴` `⚙️` $else{output};
->   - `🔴` `⚙️` $else.if(condition){output};
-> - `🔴` `🧮` Conditioners.
->   - `🔴` `🧮` N= (Equal too, for numbers)
->   - `🔴` `🧮` S= (Equal too, for strings)
->   - `🔴` `🧮` >= (Above or Equal)
->   - `🔴` `🧮` <= (Below or Equal)
->   - `🔴` `🧮` > (Above)
->   - `🔴` `🧮` < (Below)
->   - `🔴` `🧮` ?= (Equals Null/undefined/etc)
->   - `🔴` `🧮` X= (Doesnt equal, works for both strings and numbers.)
->   - `🔴` `🧮` or[(condition 1), (etc), (etc)]
->   - `🔴` `🧮` and[(condition1), (etc), (etc)]
-> - `🔴` `📜` Functions.
->   - `🔴` `📜` $var(name{value});
->   - `🔴` `📜` $val(name);
->   - `🔴` `📜` $thread(name{value});
-> - `🔴` `🔑` Function Extensions.
->   - `🔴` `🔑` .separateNumber(seperator); `Note; added a separator to the output if its a number: 14412532.separateNumber(,); = 14,412,532`
->   - `🔴` `🔑` .round(decimalPoint); `Note; rounds the number to the given decimal point: 41.41431.round(2); = 41.41`
->   - `🔴` `🔑` .collapseNumber; `Note: collapses the number into its notation: 63426342.collapseNumber; = 63.4M`
+  when: Green,
+    then: output[console]: "Green";
 
-# - `🔴` `💾` Nylon mongoDB intergration ⟶ [Full Checklist Here]()
-> - `🔴` `💾` Nylon SQL intergration ⟶ [Full Checklist Here]()
-> - `🔴` `💾` Nylon Other Database Integration ⟶ [Full Checklist Here]()
-> - `🔴` `📦` Discord.nyl v0.0.1 alpha ⟶ [Full Checklist Here]()
->   - `🔴` `💽` Discord api integration  ⟶ [Full Checklist Here]()
->   - `🔴` `💽` MongoDB integration  ⟶ [Full Checklist Here]()
->   - `🔴` `💽` SQL integration  ⟶ [Full Checklist Here]()
->   - `🔴` `💽` Other Database Integration  ⟶ [Full Checklist Here]()
+  when: Red,
+    then: wait: 5s, then: 
+    output[console]: "Red";
+
+  when: Yellow
+    if Cool Person is false,
+      then: output[console]: "Yellow, also your not cool";
+      else: output[console]; "Yellow, also your cool";
+```
+ <br>
+*File Name: exampleTrigger.nyl* | *Location: ../src/projects*
+```
+
+```
+- Discord.nyl
