@@ -182,11 +182,27 @@
 <ul>
 <li>Nylon</li>
 <li>How to Install</li>
-<li>Config
-<strong>config.nyl</strong></li>
+<li>Configuration
+<strong>config.nyls</strong></li>
 </ul>
-<details> <summary> text </summary>
-<pre><code>text
+<details> <summary> config.nyls </summary>
+<pre><code>- nylon config.nyls.
+
+- Settings.
+  [ - Watchers.
+      &gt; Max Constant Watchers: 9;
+      &gt; Max Dormant Watchers: 30;
+      &gt; Max Active Watchers: 9;
+    - Console / Output.
+      &gt; Output: true;
+      &gt; Ouput Errors: true;
+  ]
+
+- File Configuration.
+  [ &gt; Watcher Folder: src/watchers/
+    &gt; Start Script: startScript.nyl
+    &gt; Packages Config: packages.nyls
+  ]
 </code></pre>
 </details>
 <ul>
@@ -199,15 +215,33 @@ Example: <code>nyl i discord.nyl@v0.1</code> <br></li>
 </ul>
 <p><strong>Run startScript.nyl</strong> <br>
 Command: <code>nyl startScript</code></p>
-<p>❌❌❌packages❌❌❌</p>
 <ul>
 <li>📦 Discord.nyl</li>
-<li>.dnyl [📦 Discord.nyl]</li>
-<li>.nyl [📦 Discord.nyl]</li>
-<li>.nyls [📦 Discord.nyl]</li>
-<li>📦 Environment.nyl</li>
-<li>.nyls [📦 Environment.nyl]</li>
-<li>.nyl [📦 Environment.nyl]</li>
+<li>.nyls [📦 Discord.nyls]</li>
+</ul>
+<details> <summary> package.nyls </summary>
+<pre><code>- discord.nyl
+  [ - Developed By: Nylon Developments
+    - Version: v0.1
+    - Config.
+      [ &gt; enabled: true; ]
+  ]
+</code></pre>
+</details>
+ - .dnyl [📦 Discord.dnyl]
+<ul>
+<li>
+<p>.nyl [📦 Discord.nyl]</p>
+</li>
+<li>
+<p>📦 Environment.nyl</p>
+</li>
+<li>
+<p>.nyls [📦 Environment.nyl]</p>
+</li>
+<li>
+<p>.nyl [📦 Environment.nyl]</p>
+</li>
 </ul>
 
                     </main>
