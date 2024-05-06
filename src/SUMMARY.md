@@ -7,11 +7,4 @@
   - [Nylon (.nyl)]()
     - [Console Commands]()
     - [Nylon]()
-- [Nylon Packages]()
-  - [📦 Discord.nyl]()
-    - [.dnyl]()
-    - [.nyl]()
-    - [.nyls]()
-  - [📦 Environment.nyl]()
-    - [.nyls]()
-    - [.nyl]()
+  
