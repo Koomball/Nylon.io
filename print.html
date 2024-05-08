@@ -174,13 +174,24 @@
 
                 <div id="content" class="content">
                     <main>
-                        <img src="https://github.com/Koomball/Nylon.io/blob/2f10c5391a90a5df8e07580a9e5217f62e3b0466/4634634643.png">
+                        <p><img src="https://github.com/Koomball/Nylon.io/blob/2f10c5391a90a5df8e07580a9e5217f62e3b0466/4634634643.png" alt="image" /></p>
 <p><i>Nylon is a in development programming language that takes inspiration from bdscript2 and yaml. Nylon is not for discord bots and is being developed for game development but will have the tools to make any package you desire including the future discord.nyl planned much later after the languages release. Nylon can be intergrated with nearly any language to form as a universal translator that can be highly customised for whatever purpose you need it for.</i></p>
 <blockquote>
 <p><b>Here from BDFD?</b>
 Below is a condensed list of some of the major differences between BDFD and The Nylon Design Engine if your planning to use it for Discord bot development. <br></p>
 <details> <summary> Open List </summary> 
-<p><em><strong>Multiple Split Texts.</strong></em></p>
+<p><em><strong>Different syntax</strong></em> <br>
+nylon only uses $ for most functions but blocks dont use any start below is an example of this. <br></p>
+<pre><code>$tempVar[num;$randomNum[1;10]]
+
+if $get[num] &gt; 5 then:
+ - $consoleOut[above 5]
+else:
+ - $consoleOut[5 or lower]
+endif
+</code></pre>
+<p><em><strong>Multiple Split Texts.</strong></em> <br>
+nylon expands the common textSplit feature found in many languages by allowing you to store multiple textSplits and edit them simultaneously instead of having save and switch between them constantly. <br></p>
 <p><em><strong>No Free Hosting.</strong></em> <br>
 you must source your own hosting to power the Nylon Design Engine or host on your own device.</p>
 <p><em><strong>No Free Data Storage.</strong></em> <br>
@@ -193,15 +204,19 @@ You can also thread with Nylon Direct which is a solely nylon system meaning it 
 <h1 id="nylon-programming-language"><a class="header" href="#nylon-programming-language">Nylon Programming Language</a></h1>
 <p>The Nylon Programming Language takes inspiration from Bot Designer For Discords bdscript2 and the storage language yaml turning coding into a easily readable and translatable step by step process. <br></p>
 <h1 id="nild-nylon-intergration-language-for-data"><a class="header" href="#nild-nylon-intergration-language-for-data">NILD (Nylon Intergration Language for Data)</a></h1>
-<p>Data is called in through nylon with <code>$nild[]</code> below is two examples of this. <br>
+<p>Data is called in through nylon with <code>$getData[source;key;(key2;...)]</code> below is two examples of this. <br>
 nild file (inventorys.nild):</p>
 <pre><code>- user1
   [ &gt; Dirt: 0;
     &gt; Stone: 0;
   ]
+- user2
+  [ &gt; Dirt: 3;
+    &gt; Stone: 5;
+  ]
 </code></pre>
 <p>nylon code:</p>
-<pre><code class="language-diff">$nild[src/inventorys.nild;user1;Dirt]
+<pre><code class="language-diff">$getData[src/inventorys.nild;user1;Dirt]
 
 + Output: 0
 </code></pre>
