@@ -1,4 +1,4 @@
-<img src="../4634634643.png">
+<img src="https://github.com/Koomball/Nylon.io/blob/2f10c5391a90a5df8e07580a9e5217f62e3b0466/4634634643.png">
 
 <i>Nylon is a in development programming language that takes inspiration from bdscript2 and yaml. Nylon is not for discord bots and is being developed for game development but will have the tools to make any package you desire including the future discord.nyl planned much later after the languages release. Nylon can be intergrated with nearly any language to form as a universal translator that can be highly customised for whatever purpose you need it for.</i>
 
