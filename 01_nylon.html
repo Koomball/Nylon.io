@@ -176,23 +176,45 @@
                         <img src="https://github.com/Koomball/Nylon.io/blob/2f10c5391a90a5df8e07580a9e5217f62e3b0466/4634634643.png">
 <p><i>Nylon is a in development programming language that takes inspiration from bdscript2 and yaml. Nylon is not for discord bots and is being developed for game development but will have the tools to make any package you desire including the future discord.nyl planned much later after the languages release. Nylon can be intergrated with nearly any language to form as a universal translator that can be highly customised for whatever purpose you need it for.</i></p>
 <blockquote>
-<p>[!TIP]
-<b>Here from BDFD?</b> Below is a condensed list of some of the major differences between BDFD and The Nylon Design Engine if your planning to use it for Discord bot development. <br> <details> <summary> Open List </summary></p>
+<p><b>Here from BDFD?</b>
+Below is a condensed list of some of the major differences between BDFD and The Nylon Design Engine if your planning to use it for Discord bot development. <br></p>
+<details> <summary> Open List </summary> 
+<p><em><strong>Multiple Split Texts.</strong></em></p>
+<p><em><strong>No Free Hosting.</strong></em> <br>
+you must source your own hosting to power the Nylon Design Engine or host on your own device.</p>
+<p><em><strong>No Free Data Storage.</strong></em> <br>
+you must store data locally or source your own data servers.</p>
 </blockquote>
 </details>
 <h1 id="nylon-design-engine"><a class="header" href="#nylon-design-engine">Nylon Design Engine</a></h1>
+<p>The Nylon Design Engine is the code engine needed to use Nylon and NILD. Nylon views similar to Visual Studio Code but has a variables section. When creating projects you need to select a language to thread this will be the language that the Nylon language will operate on and allows you to use the nylon language to develop stuff for already existing projects that use other languages. (for example modding a game that uses java or lua) <br>
+You can also thread with Nylon Direct which is a solely nylon system meaning it cannot communicate with other languages unless you thread them within the file. <br></p>
 <h1 id="nylon-programming-language"><a class="header" href="#nylon-programming-language">Nylon Programming Language</a></h1>
+<p>The Nylon Programming Language takes inspiration from Bot Designer For Discords bdscript2 and the storage language yaml turning coding into a easily readable and translatable step by step process. <br></p>
 <h1 id="nild-nylon-intergration-language-for-data"><a class="header" href="#nild-nylon-intergration-language-for-data">NILD (Nylon Intergration Language for Data)</a></h1>
-<p><strong>config.nyls</strong></p>
-<details> <summary> config.nyls </summary>
-<pre><code>- nylon config.nyls.
+<p>Data is called in through nylon with <code>$nild[]</code> below is two examples of this. <br>
+nild file (inventorys.nild):</p>
+<pre><code>- user1
+  [ &gt; Dirt: 0;
+    &gt; Stone: 0;
+  ]
+</code></pre>
+<p>nylon code:</p>
+<pre><code class="language-diff">$nild[src/inventorys.nild;user1;Dirt]
 
-- Settings.
-  [ - Watchers.
++ Output: 0
+</code></pre>
+<details> 
+**config.nyls**
+<details> <summary> config.nyls </summary>
+<pre><code>- nylon config.nyls
+
+- Settings
+  [ - Watchers
       &gt; Max Constant Watchers: 9;
       &gt; Max Dormant Watchers: 30;
       &gt; Max Active Watchers: 9;
-    - Console / Output.
+    - Console / Output
       &gt; Output: true;
       &gt; Ouput Errors: true;
   ]
@@ -203,15 +225,14 @@
     &gt; Packages Config: packages.nyls
   ]
 </code></pre>
-</details>
-<ul>
-<li>Console Commands
-<strong>Install Package</strong> <br>
+<hr />
+</details> <summary>unsorted stuff</summary>
+<h1 id="console-commands"><a class="header" href="#console-commands">Console Commands</a></h1>
+<p><strong>Install Package</strong> <br>
 Command: <code>nyl install</code> <br>
 Example: <code>nyl i discord.nyl</code> <br>
 use @ after package name to define specific version. <br>
-Example: <code>nyl i discord.nyl@v0.1</code> <br></li>
-</ul>
+Example: <code>nyl i discord.nyl@v0.1</code> <br></p>
 <p><strong>Run startScript.nyl</strong> <br>
 Command: <code>nyl startScript</code></p>
 <p>dnylconfig.nyls</p>
@@ -223,6 +244,7 @@ Command: <code>nyl startScript</code></p>
       [ &gt; enabled: true; ]
   ]
 </code></pre>
+</details>
 
                     </main>
 
