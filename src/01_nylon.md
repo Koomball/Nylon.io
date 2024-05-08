@@ -2,29 +2,55 @@
 
 <i>Nylon is a in development programming language that takes inspiration from bdscript2 and yaml. Nylon is not for discord bots and is being developed for game development but will have the tools to make any package you desire including the future discord.nyl planned much later after the languages release. Nylon can be intergrated with nearly any language to form as a universal translator that can be highly customised for whatever purpose you need it for.</i>
 
-> [!TIP]
-> <b>Here from BDFD?</b> Below is a condensed list of some of the major differences between BDFD and The Nylon Design Engine if your planning to use it for Discord bot development. <br> <details> <summary> Open List </summary>
-
+> <b>Here from BDFD?</b>
+> Below is a condensed list of some of the major differences between BDFD and The Nylon Design Engine if your planning to use it for Discord bot development. <br>
+> <details> <summary> Open List </summary> 
+> 
+> ***Multiple Split Texts.***
+>
+> ***No Free Hosting.*** <br>
+> you must source your own hosting to power the Nylon Design Engine or host on your own device.
+> 
+> ***No Free Data Storage.*** <br>
+> you must store data locally or source your own data servers.
 </details>
 
 # Nylon Design Engine
+The Nylon Design Engine is the code engine needed to use Nylon and NILD. Nylon views similar to Visual Studio Code but has a variables section. When creating projects you need to select a language to thread this will be the language that the Nylon language will operate on and allows you to use the nylon language to develop stuff for already existing projects that use other languages. (for example modding a game that uses java or lua) <br>
+You can also thread with Nylon Direct which is a solely nylon system meaning it cannot communicate with other languages unless you thread them within the file. <br>
 
 # Nylon Programming Language
+The Nylon Programming Language takes inspiration from Bot Designer For Discords bdscript2 and the storage language yaml turning coding into a easily readable and translatable step by step process. <br>
 
 # NILD (Nylon Intergration Language for Data)
+Data is called in through nylon with `$nild[]` below is two examples of this. <br>
+nild file (inventorys.nild):
+```
+- user1
+  [ > Dirt: 0;
+    > Stone: 0;
+  ]
+```
+nylon code:
+```diff
+$nild[src/inventorys.nild;user1;Dirt]
 
++ Output: 0
+```
+
+<details> 
 **config.nyls**
 <details> <summary> config.nyls </summary>
   
 ```
-- nylon config.nyls.
+- nylon config.nyls
 
-- Settings.
-  [ - Watchers.
+- Settings
+  [ - Watchers
       > Max Constant Watchers: 9;
       > Max Dormant Watchers: 30;
       > Max Active Watchers: 9;
-    - Console / Output.
+    - Console / Output
       > Output: true;
       > Ouput Errors: true;
   ]
@@ -36,9 +62,11 @@
   ]
 ```
 
-</details>
+---
 
-  - Console Commands
+</details> <summary>unsorted stuff</summary>
+
+# Console Commands
 **Install Package** <br>
 Command: `nyl install` <br>
 Example: `nyl i discord.nyl` <br>
@@ -58,6 +86,6 @@ dnylconfig.nyls
       [ > enabled: true; ]
   ]
 ```
-
+</details>
 
 
