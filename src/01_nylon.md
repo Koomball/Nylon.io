@@ -1,8 +1,17 @@
-[![image](../4634634643.png)](https://koomball.github.io/Nylon.io/) 
-<br>
+<img src="../4634634643.png">
 
-*Welcome to nylon a unique language made to simplify programming and allow you to build your own functions / packages to make your projects easier for your company or personal use!*
- <br>
+<i>Nylon is a in development programming language that takes inspiration from bdscript2 and yaml. Nylon is not for discord bots and is being developed for game development but will have the tools to make any package you desire including the future discord.nyl planned much later after the languages release. Nylon can be intergrated with nearly any language to form as a universal translator that can be highly customised for whatever purpose you need it for.</i>
+
+> [!TIP]
+> <b>Here from BDFD?</b> Below is a condensed list of some of the major differences between BDFD and The Nylon Design Engine if your planning to use it for Discord bot development. <br> <details> <summary> Open List </summary>
+
+</details>
+
+# Nylon Design Engine
+
+# Nylon Programming Language
+
+# NILD (Nylon Intergration Language for Data)
 
 **config.nyls**
 <details> <summary> config.nyls </summary>
