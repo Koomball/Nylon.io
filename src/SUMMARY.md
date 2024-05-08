@@ -1,5 +1,5 @@
 # Summary
-- [Nylon Design Engine](https://github.com/Koomball/Nylon.io/blob/main/src/01_nylon.md)
+- [Nylon Design Engine](01_nylon.md)
   - [Part A - What is the Nylon Design Engine?]()
 
 - [Nylon Programming Language]()
