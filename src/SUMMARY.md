@@ -1,7 +1,8 @@
 # Summary
-- [Nylon Design Engine](01_nylon.md)
-  - [Part A - What is the Nylon Design Engine?](01_nylond.md#Nylom_Design_Engine)
+- [Welcome To Nylon](01_nylon.md)
+- 
+- [Nylon Design Engine]()
 
 - [Nylon Programming Language](02_nylonlang.md)
-
+  - [PART A - Threading a Language]()
 - [NILD (Nylon Integration Language for Data)]()
