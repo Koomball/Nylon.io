@@ -14,37 +14,39 @@ The Nylon Programming Language takes inspiration from Bot Designer For Discords 
 > Example tray in html:
 > ```html
 > <table>
-    <thead>
-        <tr>
-            <th colspan=3>===================================================================================</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan=3><${\color{green}BDFD \ \ WIKIS}$</td>
-        </tr>
-        <tr>
-            <td>${\color{blue}BDFD}$</p></td>
-            <td><code>Easy (1/5)</code></td>
-            <td> <code>Published: 13/05/24</code> <br> <a class="link" href="https://github.com/Koomball/BDFD-Author-Only-Interactions/tree/main"> Author Only Interactions. </td>
-        </tr>
-    </tbody>
-</table>
+>    <thead>
+>        <tr>
+>            <th  colspan=3>===================================================================================</th>
+>        </tr>
+>    </thead>
+>    <tbody>
+>        <tr>
+>            <td colspan=3><${\color{green}BDFD \ \ WIKIS}$</td>
+>        </tr>
+>        <tr>
+>            <td>${\color{blue}BDFD}$</p></td>
+>            <td><code>Easy (1/5)</code></td>
+>            <td> <code>Published: 13/05/24</code> <br> <a class="link" href="https://github.com/Koomball/BDFD-Author-Only-Interactions/tree/main"> Author Only Interactions. </td>
+>        </tr>
+>    </tbody>
+> </table>
 > ```
+> 
 > In Nylon.html:
 > ```
 > $table[$thead[$tr[$th[3;>===================================================================================]]]
-$tbody[
-$tr[
-  $td[3;${\color{green}BDFD \ \ WIKIS}$]]
-$tr[
-  $td[1;${\color{blue}BDFD}$]
-  $td[1;$code[Easy (1/5)]]
-  $td[1;$code[Published: 13/05/24]$nline
-  $hyperlink[Author Only Interactions;https://github.com/Koomball/BDFD-Author-Only-Interactions/tree/main]]
-]
-]]
+> $tbody[
+> $tr[
+>   $td[3;${\color{green}BDFD \ \ WIKIS}$]]
+> $tr[
+>   $td[1;${\color{blue}BDFD}$]
+>   $td[1;$code[Easy (1/5)]]
+>   $td[1;$code[Published: 13/05/24]$nline
+>   $hyperlink[Author Only Interactions;https://github.com/Koomball/BDFD-Author-Only-Interactions/tree/main]]
+> ]
+> ]]
 > ```
+> 
 > ***Other Threads***
 > - Javascript
 > - Typescript
